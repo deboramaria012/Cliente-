@@ -1,70 +1,184 @@
 @extends('layout.layout')
 
-@section ('title',)
+@section ('title')
 
 @section ('conteudo')
 
 
-<div class="hero-wrapper hero-2" id="hero">
-    <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1" data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true" data-ml-arrows="true">
-        <div class="hero-slider" data-bg-src="{{ asset ('img/camisa.jpg') }}">
-            <div class="hero-shape2-1 shape-mockup movingX" data-bottom="-100px" data-left="0">
-                <img src="{{ asset('img/') }}" alt="img">
-            </div>
-            <div class="hero-shape2-2 shape-mockup jump2" data-bottom="-50px" data-right="-10%">
-                <img src="{{ asset ('img/') }}" alt="img">
-            </div>
-            <div class="hero-shape2-3 shape-mockup jump2" data-top="-30%" data-left="-30%">
-                <img src="{{ asset('img/') }}" alt="img">
-            </div>
-            <div class="container">
-                <div class="row justify-content-lg-end justify-content-center">
-                    <div class="col-xl-6 col-lg-7 col-md-9">
-                        <div class="hero-style2">
-                            <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Grow Your</span>
-                            <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">Strength</h1>
-                            <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">WITH Fitmas</span>
-                            <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                <a href="{{ url('/contato') }}" class="btn style-r0 style2">Marque uma consulta</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div class="hero-slider" data-bg-src="{{ asset ('img/caneca.jpg')}}">
-            <div class="hero-shape2-1 shape-mockup movingX" data-bottom="-165px" data-left="0">
-                <img src="{{ asset('img/') }}" alt="img">
-            </div>
-            <div class="hero-shape2-2 shape-mockup jump2" data-bottom="-50px" data-right="-10%">
-                <img src="{{ asset('img/') }}" alt="img">
-            </div>
-            <div class="hero-shape2-3 shape-mockup jump2" data-top="-30%" data-left="30%">
-                <img src="{{ asset('img/') }}" alt="img">
-            </div>
-            <div class="container">
-                <div class="row justify-content-lg-end justify-content-center">
-                    <div class="col-xl-6 col-lg-7 col-md-9">
-                        <div class="hero-style2">
-                            <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Grow Your</span>
-                            <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">Strength</h1>
-                            <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">WITH Fitmas</span>
-                            <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                <a href="{{ url('/contato') }}" class="btn style-r0 style2">Make Appointment</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ asset('img/camisa.jpg') }}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('img/caneca.png') }}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('img/agenda.jpg') }}" class="d-block w-100" alt="...">
+      </div>
     </div>
-    <div class="hero-arrow">
-        <button data-slick-prev="#heroSlider2" class="slick-arrow slick-prev">PREV</button>
-        <button data-slick-next="#heroSlider2" class="slick-arrow slick-next">NEXT</button>
+  </div>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h5 class="section-title text-primary">Nossos serviços</h5>
+        <h1 class="mb-5">Explore nossos serviços</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <h5 class="card-title">Garantia de Qualidade</h5>
+                    <p class="card-text">Utilizamos os melhores materiais para garantir produtos duráveis e de alta qualidade.</p>
+                </div>
+                <div class="go-corner">
+                    <div class="go-arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="card-body">
+                    <h5 class="card-title">Atendimento ao Cliente</h5>
+                    <p class="card-text">Nosso compromisso é proporcionar uma experiência excepcional a cada cliente.</p>
+                </div>
+                <div class="go-corner">
+                    <div class="go-arrow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <div class="card-body">
+                    <h5 class="card-title">Entrega Rápida e Segura</h5>
+                    <p class="card-text">Nossos produtos são entregues de forma rápida e segura garantido.</p>
+                </div>
+                <div class="go-corner">
+                    <div class="go-arrow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                <div class="card-body">
+                    <h5 class="card-title">Ideias de Presentes Criativos</h5>
+                    <p class="card-text">Desde canecas personalizadas com fotos e mensagens especiais até camisetas.</p>
+                </div>
+                <div class="go-corner">
+                    <div class="go-arrow"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 
+<div class="container">
+    <h2 class="text-center mb-4">Catalogo de Produtos</h2>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="produto-card">
+                <img src="caminho_para_imagem_produto_1.jpg" alt="Produto 1">
+                <h4>Nome do Produto 1</h4>
+                <p>Descrição breve do Produto 1.</p>
+                <a href="#" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="produto-card">
+                <img src="caminho_para_imagem_produto_2.jpg" alt="Produto 2">
+                <h4>Nome do Produto 2</h4>
+                <p>Descrição breve do Produto 2.</p>
+                <a href="#" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="produto-card">
+                <img src="caminho_para_imagem_produto_3.jpg" alt="Produto 3">
+                <h4>Nome do Produto 3</h4>
+                <p>Descrição breve do Produto 3.</p>
+                <a href="#" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="produto-card">
+                <img src="caminho_para_imagem_produto_4.jpg" alt="Produto 4">
+                <h4>Nome do Produto 4</h4>
+                <p>Descrição breve do Produto 4.</p>
+                <a href="#" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="portfolio-area space-top space-extra-bottom">
+    <div class="container">
+        <h1 class="text-center">NOSSA GALERIA</h1>
+        <div class="row gy-30">
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_1.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_1.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_2.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_2.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_3.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_3.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_4.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_4.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_5.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_5.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_6.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_6.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_7.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_7.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_8.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_8.png" alt="portfolio">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-thumb">
+                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_9.png"><i class="far fa-eye"></i></a>
+                    <img src="assets/img/portfolio/portfolio1_9.png" alt="portfolio">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
