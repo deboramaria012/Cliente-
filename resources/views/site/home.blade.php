@@ -20,6 +20,8 @@
     </div>
   </div>
 
+
+
 <div class="container py-5">
     <div class="text-center mb-5">
         <h5 class="section-title text-primary">Nossos serviços</h5>
@@ -124,56 +126,56 @@
         <div class="row gy-30">
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_1.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_1.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_2.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_2.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria1.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria1.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_3.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_3.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria2.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria2.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_4.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_4.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeira3.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria3.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_5.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_5.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria4.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria4.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_6.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_6.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeira5.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria5.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_7.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_7.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria6.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeira6.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_8.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_8.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria7.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria7.png') }}" alt="portfolio">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_9.png"><i class="far fa-eye"></i></a>
-                    <img src="assets/img/portfolio/portfolio1_9.png" alt="portfolio">
+                    <a class="popup-image icon-btn" href="{{ asset('img/galeria8.png') }}"><i class="far fa-eye"></i></a>
+                    <img src="{{ asset('img/galeria8.png') }}" alt="portfolio">
                 </div>
             </div>
         </div>
