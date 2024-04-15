@@ -5,62 +5,38 @@
 @section ('conteudo')
 
 
-<div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="left-image">
-            <img src="{{ asset('img/about-left-image.png') }}" alt="Two Girls working together">
-          </div>
+<main id="main">
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Sobre nós</h2>
+        <p><span>CriativeArte</span></p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg);" data-aos="fade-up" data-aos-delay="150">
+          <!-- Conteúdo da imagem -->
         </div>
-        <div class="col-lg-6">
-          <div class="section-heading">
-            <h2>Sobre nós <em>SEO Tools</em> &amp; <span>Project</span> Management</h2>
-            <p>A L.M. Canecas é uma empresa especializada em oferecer produtos personalizados de alta qualidade. Nossa missão é transformar momentos especiais em lembranças únicas por meio de canecas e brindes personalizados. Com uma ampla variedade de designs e opções de personalização, garantimos que cada produto conte uma história e transmita emoções. Seja para presentear alguém especial ou para promover sua marca, na L.M. Canecas você encontra a combinação perfeita entre criatividade, qualidade e exclusividade.</p>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="{{ asset('img/service-icon-01.png') }}" alt="">
-                    </div>
-                    <div class="count-digit">320</div>
-                    <div class="count-title">SEO Projects</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="{{ asset('img/service-icon-02.png') }}" alt="">
-                    </div>
-                    <div class="count-digit">640</div>
-                    <div class="count-title">Websites</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="{{ asset('img/service-icon-03.png') }}" alt="">
-                    </div>
-                    <div class="count-digit">120</div>
-                    <div class="count-title">Satisfied Clients</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
+        <div class="col-lg-5 d-flex align-items-center text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="content ps-0 ps-lg-5">
+            <p class="fst-italic fs-5">
+              A CriativeArte é uma empresa especializada em oferecer produtos personalizados de alta qualidade. Nossa missão é transformar momentos especiais em lembranças únicas por meio de canecas e brindes personalizados.
+            </p>
+            <ul class="fs-5">
+              <li><i class="bi bi-check2-all"></i> Personalização de produtos exclusivos para cada ocasião.</li>
+              <li><i class="bi bi-check2-all"></i> Design único e de alta qualidade em cada item.</li>
+              <li><i class="bi bi-check2-all"></i> Variedade de opções para expressar sua criatividade.</li>
+            </ul>
+            <div class="mt-4">
+              <a href="#" class="btn btn-primary">Saiba Mais</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
+  
+</section><!-- End About Section -->
 
 
 @endsection

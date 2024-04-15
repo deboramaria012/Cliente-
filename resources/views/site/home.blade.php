@@ -5,182 +5,310 @@
 @section ('conteudo')
 
 
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{ asset('img/camisa.jpg') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('img/caneca.png') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('img/agenda.jpg') }}" class="d-block w-100" alt="...">
-      </div>
-    </div>
-  </div>
-
-
-
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h5 class="section-title text-primary">Nossos serviços</h5>
-        <h1 class="mb-5">Explore nossos serviços</h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-sm-6">
-            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">Garantia de Qualidade</h5>
-                    <p class="card-text">Utilizamos os melhores materiais para garantir produtos duráveis e de alta qualidade.</p>
-                </div>
-                <div class="go-corner">
-                    <div class="go-arrow"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                <div class="card-body">
-                    <h5 class="card-title">Atendimento ao Cliente</h5>
-                    <p class="card-text">Nosso compromisso é proporcionar uma experiência excepcional a cada cliente.</p>
-                </div>
-                <div class="go-corner">
-                    <div class="go-arrow"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6">
-            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                <div class="card-body">
-                    <h5 class="card-title">Entrega Rápida e Segura</h5>
-                    <p class="card-text">Nossos produtos são entregues de forma rápida e segura garantido.</p>
-                </div>
-                <div class="go-corner">
-                    <div class="go-arrow"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6">
-            <div class="card border-primary shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-                <div class="card-body">
-                    <h5 class="card-title">Ideias de Presentes Criativos</h5>
-                    <p class="card-text">Desde canecas personalizadas com fotos e mensagens especiais até camisetas.</p>
-                </div>
-                <div class="go-corner">
-                    <div class="go-arrow"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <h2 class="text-center mb-4">Catalogo de Produtos</h2>
-
-    <div class="row">
-        <div class="col-md-3">
-            <div class="produto-card">
-                <img src="caminho_para_imagem_produto_1.jpg" alt="Produto 1">
-                <h4>Nome do Produto 1</h4>
-                <p>Descrição breve do Produto 1.</p>
-                <a href="#" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="produto-card">
-                <img src="caminho_para_imagem_produto_2.jpg" alt="Produto 2">
-                <h4>Nome do Produto 2</h4>
-                <p>Descrição breve do Produto 2.</p>
-                <a href="#" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="produto-card">
-                <img src="caminho_para_imagem_produto_3.jpg" alt="Produto 3">
-                <h4>Nome do Produto 3</h4>
-                <p>Descrição breve do Produto 3.</p>
-                <a href="#" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="produto-card">
-                <img src="caminho_para_imagem_produto_4.jpg" alt="Produto 4">
-                <h4>Nome do Produto 4</h4>
-                <p>Descrição breve do Produto 4.</p>
-                <a href="#" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="portfolio-area space-top space-extra-bottom">
+<section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
-        <h1 class="text-center">NOSSA GALERIA</h1>
-        <div class="row gy-30">
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria1.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria1.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria2.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria2.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeira3.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria3.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria4.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria4.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeira5.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria5.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria6.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeira6.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria7.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria7.png') }}" alt="portfolio">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-thumb">
-                    <a class="popup-image icon-btn" href="{{ asset('img/galeria8.png') }}"><i class="far fa-eye"></i></a>
-                    <img src="{{ asset('img/galeria8.png') }}" alt="portfolio">
-                </div>
-            </div>
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Personalize seus Brindes<br>e Encante seus Clientes</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae quam et mauris congue faucibus. Nam varius ultrices nisi sit amet finibus.</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#book-a-table" class="btn-book-a-table">Solicitar Orçamento</a>
         </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
     </div>
-</div>
+  </section><!-- End Hero Section -->
+
+
+  <main id="main">
+
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Sobre nós</h2>
+            <p><span>CriativeArte</span></p>
+          </div>
+          <div class="row gy-4">
+            <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg);" data-aos="fade-up" data-aos-delay="150">
+              <!-- Conteúdo da imagem -->
+            </div>
+            <div class="col-lg-5 d-flex align-items-center text-center" data-aos="fade-up" data-aos-delay="300">
+              <div class="content ps-0 ps-lg-5">
+                <p class="fst-italic fs-5">
+                  A CriativeArte é uma empresa especializada em oferecer produtos personalizados de alta qualidade. Nossa missão é transformar momentos especiais em lembranças únicas por meio de canecas e brindes personalizados.
+                </p>
+                <ul class="fs-5">
+                  <li><i class="bi bi-check2-all"></i> Personalização de produtos exclusivos para cada ocasião.</li>
+                  <li><i class="bi bi-check2-all"></i> Design único e de alta qualidade em cada item.</li>
+                  <li><i class="bi bi-check2-all"></i> Variedade de opções para expressar sua criatividade.</li>
+                </ul>
+                <div class="mt-4">
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section><!-- End About Section -->
+
+    <section id="why-us" class="why-us section-bg">
+        <div class="container" data-aos="fade-up">
+
+          <!-- Texto centralizado -->
+          <div class="row gy-4 justify-content-center text-center">
+            <div class="col-lg-12">
+              <h3 class="mb-4 special-heading">Por que escolher a L.M Canecas?</h3>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-box d-flex flex-column justify-content-center align-items-center special-box">
+                <i class="fas fa-cogs"></i>
+                <h4>Personalização de Qualidade</h4>
+                <p>Brindes personalizados com os melhores materiais e impressão de alta qualidade.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box d-flex flex-column justify-content-center align-items-center special-box">
+                <i class="fas fa-gem"></i>
+                <h4>Variedade e Inovação</h4>
+                <p>Ampla variedade de produtos exclusivos e opções criativas para sua marca.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box d-flex flex-column justify-content-center align-items-center special-box">
+                <i class="fas fa-truck"></i>
+                <h4>Entrega Rápida e Segura</h4>
+                <p>Envio rápido e seguro para todo o Brasil, garantindo a satisfação dos nossos clientes.</p>
+              </div>
+            </div><!-- End Icon Box -->
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="menu" class="menu">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>Nossos Produtos</h2>
+            <p>CriativeArte<span></span></p>
+          </div>
+
+          <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#produtos-camisetas">
+                <h4>Camisetas</h4>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#produtos-canecas">
+                <h4>Canecas</h4>
+              </a><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#produtos-agendas">
+                <h4>Agendas</h4>
+              </a>
+            </li><!-- End tab nav item -->
+          </ul>
+
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="tab-pane fade active show" id="produtos-camisetas">
+
+              <div class="tab-header text-center">
+                <p>Produtos</p>
+                <h3>Camisetas</h3>
+              </div>
+
+              <div class="row gy-5">
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Magnam Tiste</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $5.95
+                  </p>
+                </div><!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Aut Luia</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $14.95
+                  </p>
+                </div><!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Est Eligendi</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $8.95
+                  </p>
+                </div><!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $12.95
+                  </p>
+                </div><!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $12.95
+                  </p>
+                </div><!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                  <h4>Laboriosam Direva</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">
+                    $9.95
+                  </p>
+                </div><!-- Menu Item -->
+
+              </div>
+            </div><!-- End Starter Menu Content -->
+
+
+            <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <p>Menu</p>
+              <h3>Breakfast</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Magnam Tiste</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $5.95
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aut Luia</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $14.95
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Est Eligendi</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $8.95
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Eos Luibusdam</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $12.95
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Eos Luibusdam</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $12.95
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Laboriosam Direva</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $9.95
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Breakfast Menu Content -->
+
+  </main>
+
+  <section id="gallery" class="gallery section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Galeria</h2>
+        <p>Check <span>Our Gallery</span></p>
+      </div>
+
+      <div class="gallery-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria.png') }}"><img src="{{ asset('img/galeria.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria1.png') }}"><img src="{{ asset('img/galeria1.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria2.png') }}"><img src="{{ asset('img/galeria2.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria.png') }}"><img src="{{ asset('img/galeria.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria1.png') }}"><img src="{{ asset('img/galeria1.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria2.png') }}"><img src="{{ asset('img/galeria2.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria1.png') }}"><img src="{{ asset('img/galeria1.png') }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{{ asset('img/galeria2.png') }}"><img src="{{ asset('img/galeria2.png') }}" class="img-fluid" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
 
 
 
