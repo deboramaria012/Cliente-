@@ -54,7 +54,9 @@
      <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
 
      <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
+
      <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
+
      <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
 
 
@@ -78,19 +80,12 @@
           <li><a href="#menu">Menu</a></li>
           <li><a href="{{ url('/servico') }}">Serviços</a></li>
           <li><a href="{{ url('/contato') }}">Contato</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#gallery">Galeria</a></li>
           </li>
         </ul>
       </nav><!-- .navbar -->
 
-      <button>
-        <span class="circle1"></span>
-        <span class="circle2"></span>
-        <span class="circle3"></span>
-        <span class="circle4"></span>
-        <span class="circle5"></span>
-        <span class="{{ url('/login') }}">Login</span>
-    </button>
+      <a class="btn" href="{{ url('/login') }}">Login</a>
 
     <a href="{{ url('/carrinho') }}" class="cart"><i class="fas fa-shopping-cart"></i></a>
 
@@ -141,14 +136,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Galeria</h3>
-                        <div class="sidebar-gallery">
-                            <!-- Adicione aqui suas imagens da galeria -->
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="widget footer-widget">
                         <h3 class="widget_title">Receba boletim informativo</h3>
@@ -172,7 +159,7 @@
     <div class="copyright-wrap">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2023 <a href="#">Fitmas.</a>Todos os direitos reservados.</p></div>
+                <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Criativearte</a>Todos os direitos reservados.</p></div>
             </div>
         </div>
     </div>
@@ -194,14 +181,13 @@
 <script src="{{ asset('js/aos.js') }}"></script>
 <script src="{{ asset('js/glightbox.min.js') }}"></script>
 <script src="{{ asset('js/purecounter_vanilla.js') }}"></script>
-<script src="{{ asset('js/swiper-bundle.min.js') }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
 
 
 <script>
     AOS.init();
 </script>
 
-<!-- Template Main JS File -->
 
 
 </html>
