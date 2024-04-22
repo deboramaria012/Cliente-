@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -19,8 +21,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');//Pagina Home
+
 Route::get('/sobre',[SobreController::class,'index'])->name('sobre');//Pagina Sobre
+
 Route::get('/servico',[ServicoController::class,'index'])->name('servico');//
+
 Route::get('/contato',[ContatoController::class,'index'])->name('contato');//Pagina Contato
+
 Route::get('/login',[LoginController::class,'index'])->name('login');
 
+Route::post('/login',[LoginController::class,'autenticar'])->name('login.autenticar');
+
+Route::get('/dashboard/admin',[AdminController::class,'index'])->name('dashboard.admin');
+
+
+Route::middleware('autenticacaoCliente')->group(function () {
+    // Rotas protegidas pelo middleware para clientes
+    Route::get('/cliente',[ClienteController::class,'index'])->name('dashboard.cliente');
+});

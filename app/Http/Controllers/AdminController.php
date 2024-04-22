@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ClienteModel;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class AdminController extends Controller
 {
     public function index()
 {
@@ -17,9 +17,7 @@ class ClienteController extends Controller
         abort(404, 'Cliente não encontrado');
     }
 
-    $usuario = $cliente->usuario; // Assumindo que existe uma relação entre Cliente e Usuario
-
-    return view('site.dashboard.cliente.cliente', compact('cliente', 'usuario'));
+    return view('site.dashboard.funcionarios.admin', compact('cliente'));
 }
 
 }
