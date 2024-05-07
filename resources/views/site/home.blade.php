@@ -130,17 +130,108 @@
 
                 <!-- Produto 1 - Camiseta -->
                 <div class="col-lg-4 menu-item">
-                  <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                  <a href="" class="glightbox"><img src="{{ asset('img/camisa.png') }}" class="menu-img img-fluid" alt=""></a>
                   <h4>Magnam Tiste</h4>
                   <p class="ingredients">
                     Lorem, deren, trataro, filede, nerada
                   </p>
                   <p class="price">
-                    $5.95
+                    $45.9
                   </p>
                 </div><!-- Menu Item -->
 
-                <!-- Adicione mais produtos de camisetas conforme necessário -->
+                <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa1.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa2.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa3.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa4.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa5.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa6.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/camisa8.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Magnam Tiste</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $45.9
+                    </p>
+                  </div><!-- Menu Item -->
 
               </div>
             </div><!-- End Produtos Camisetas -->
@@ -156,7 +247,7 @@
                     Lorem, deren, trataro, filede, nerada
                   </p>
                   <p class="price">
-                    $10.95
+                    $35.9
                   </p>
                 </div><!-- Menu Item -->
 
@@ -167,7 +258,7 @@
                       Lorem, deren, trataro, filede, nerada
                     </p>
                     <p class="price">
-                      $10.95
+                      $35.9
                     </p>
                   </div><!-- Menu Item -->
 
@@ -178,10 +269,79 @@
                       Lorem, deren, trataro, filede, nerada
                     </p>
                     <p class="price">
-                      $10.95
+                      $35.9
                     </p>
                   </div><!-- Menu Item -->
-                <!-- Adicione mais produtos de canecas conforme necessário -->
+
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca4.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca5.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca6.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca8.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/caneca9.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Caneca Magna</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $35.9
+                    </p>
+                  </div><!-- Menu Item -->
 
               </div>
             </div><!-- End Produtos Canecas -->
@@ -191,17 +351,107 @@
 
                 <!-- Produto 1 - Agenda -->
                 <div class="col-lg-4 menu-item">
-                  <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                  <a href="" class="glightbox"><img src="{{ asset('agenda.png') }}" class="menu-img img-fluid" alt=""></a>
                   <h4>Agenda Premium</h4>
                   <p class="ingredients">
                     Lorem, deren, trataro, filede, nerada
                   </p>
                   <p class="price">
-                    $15.95
+                    $25.9
                   </p>
                 </div><!-- Menu Item -->
 
-                <!-- Adicione mais produtos de agendas conforme necessário -->
+                <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda1.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda2.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda3.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda4.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda5.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda6.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('agenda7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
 
               </div>
             </div><!-- End Produtos Agendas -->
