@@ -8,18 +8,18 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function index()
-{
-    $idCliente = session('id');
-    $cliente = ClienteModel::find($idCliente);
+    public function buscarClientePorEmail(Request $request)
+    {
+        $emailCliente = $request->input('email'); // Supondo que você esteja passando o email via parâmetro de requisição
 
-    if (!$cliente) {
-        abort(404, 'Cliente não encontrado');
+        $cliente = ClienteModel::where('endereco_email', $emailCliente)->first();
+
+        if ($cliente) {
+            // Faça algo com os dados do cliente encontrado, como retornar uma view
+            return view('cliente', ['cliente' => $cliente]);
+        } else {
+            // Tratar caso nenhum cliente seja encontrado, como retornar uma mensagem de erro
+            return redirect()->back()->with('error', 'Cliente não encontrado.');
+        }
     }
-
-    $usuario = $cliente->usuario; // Assumindo que existe uma relação entre Cliente e Usuario
-
-    return view('site.dashboard.cliente.cliente', compact('cliente', 'usuario'));
-}
-
 }

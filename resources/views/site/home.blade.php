@@ -5,21 +5,80 @@
 @section ('conteudo')
 
 
-<section id="hero" class="hero d-flex align-items-center section-bg">
-    <div class="container">
-      <div class="row justify-content-between gy-5">
-        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h2 data-aos="fade-up">Personalize seus Brindes<br>e Encante seus Clientes</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae quam et mauris congue faucibus. Nam varius ultrices nisi sit amet finibus.</p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Solicitar Orçamento</a>
+
+<style>
+  .carousel-item {
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .btn-book-a-table {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-book-a-table:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    /* Custom styles for carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 30px; /* Smaller width */
+      height: 100%; /* Full height for better click area */
+      opacity: 0; /* Invisible */
+      z-index: 1; /* Ensure it is clickable */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      display: none; /* Hide icons */
+    }
+  </style>
+</head>
+<body>
+    <section id="hero" class="hero d-flex align-items-center section-bg">
+        <div class="container">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-between gy-5">
+                  <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                    <h2 data-aos="fade-up">Personalize seus Brindes<br>e Encante seus Clientes</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae quam et mauris congue faucibus. Nam varius ultrices nisi sit amet finibus.</p>
+                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                      <a href="#book-a-table" class="btn-book-a-table">Solicitar Orçamento</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+                    <img src="{{ asset('img/banner2.png') }}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-between gy-5">
+                  <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                    <h2 data-aos="fade-up">Personalize seus Brindes<br>e Encante seus Clientes</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Outras informações relevantes sobre seus produtos e serviços.</p>
+                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                      <a href="#book-a-table" class="btn-book-a-table">Solicitar Orçamento</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+                    <img src="{{ asset('img/caneca..png') }}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
+      </section>
+
+
 
 
   <main id="main">
@@ -351,7 +410,7 @@
 
                 <!-- Produto 1 - Agenda -->
                 <div class="col-lg-4 menu-item">
-                  <a href="" class="glightbox"><img src="{{ asset('agenda.png') }}" class="menu-img img-fluid" alt=""></a>
+                  <a href="" class="glightbox"><img src="{{ asset('img/agenda.png') }}" class="menu-img img-fluid" alt=""></a>
                   <h4>Agenda Premium</h4>
                   <p class="ingredients">
                     Lorem, deren, trataro, filede, nerada
@@ -362,7 +421,7 @@
                 </div><!-- Menu Item -->
 
                 <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda1.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda1.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -373,7 +432,7 @@
                   </div>
 
                   <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda2.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda2.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -384,19 +443,7 @@
                   </div>
 
                   <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda3.png') }}" class="menu-img img-fluid" alt=""></a>
-                    <h4>Agenda Premium</h4>
-                    <p class="ingredients">
-                      Lorem, deren, trataro, filede, nerada
-                    </p>
-                    <p class="price">
-                      $25.9
-                    </p>
-                  </div>
-
-
-                  <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda4.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda3.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -408,7 +455,7 @@
 
 
                   <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda5.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda4.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -420,18 +467,7 @@
 
 
                   <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda6.png') }}" class="menu-img img-fluid" alt=""></a>
-                    <h4>Agenda Premium</h4>
-                    <p class="ingredients">
-                      Lorem, deren, trataro, filede, nerada
-                    </p>
-                    <p class="price">
-                      $25.9
-                    </p>
-                  </div>
-
-                  <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda5.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -443,7 +479,30 @@
 
 
                   <div class="col-lg-4 menu-item">
-                    <a href="" class="glightbox"><img src="{{ asset('agenda7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda6.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda7.png') }}" class="menu-img img-fluid" alt=""></a>
+                    <h4>Agenda Premium</h4>
+                    <p class="ingredients">
+                      Lorem, deren, trataro, filede, nerada
+                    </p>
+                    <p class="price">
+                      $25.9
+                    </p>
+                  </div>
+
+
+                  <div class="col-lg-4 menu-item">
+                    <a href="" class="glightbox"><img src="{{ asset('img/agenda8.png') }}" class="menu-img img-fluid" alt=""></a>
                     <h4>Agenda Premium</h4>
                     <p class="ingredients">
                       Lorem, deren, trataro, filede, nerada
@@ -486,6 +545,7 @@
     </div>
   </section><!-- End Gallery Section -->
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
 @endsection

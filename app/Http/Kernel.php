@@ -67,5 +67,8 @@ class Kernel extends HttpKernel
 
         'autenticacaoCliente' =>
          \App\Http\Middleware\AutCriativeMiddle::class,
+
+         'autenticacaoCliente' => \App\Http\Middleware\AutenticacaoCliente::class,
+
     ];
 }

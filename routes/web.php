@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\SobreController;
+use App\Models\ClienteModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,11 +29,41 @@ Route::get('/servico',[ServicoController::class,'index'])->name('servico');//
 
 Route::get('/contato',[ContatoController::class,'index'])->name('contato');//Pagina Contato
 
-Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 
-Route::post('/login',[LoginController::class,'autenticar'])->name('login.autenticar');
 
-Route::get('/dashboard/admin',[AdminController::class,'index'])->name('dashboard.admin');
+Route::post('/login', [LoginController::class, 'autenticar'])->name('login.autenticar');
+
+
+Route::get('/dashboard/admin', [AdminController::class, 'index'])
+->name('dashboard.admin')
+->middleware('autenticacaoCliente');
+
+
+Route::get('/buscar-cliente', function ( $request) {
+    $emaiCliente = $request->input('email'); // Supondo que você esteja passando o email via URL
+
+    $cliente = ClienteModel::where('email', $emaiCliente)->first();
+
+    if ($cliente) {
+        // Faça algo com os dados do cliente encontrado, como retornar uma view
+        return view('cliente', ['cliente' => $cliente]);
+    } else {
+        // Tratar caso nenhum cliente seja encontrado, como retornar uma mensagem de erro
+        return redirect()->back()->with('error', 'Cliente não encontrado.');
+    }
+});
+
+
+Route::get('/carrinho', 'App\Http\Controllers\CarrinhoController@index');
+
+Route::post('/adicionar-ao-carrinho', 'App\Http\Controllers\CarrinhoController@adicionarAoCarrinho')->name('adicionarAoCarrinho');
+
+Route::post('/remover-item-carrinho', 'App\Http\Controllers\CarrinhoController@removerItemCarrinho')->name('removerItemCarrinho');
+
+
+Route::get('/produtos', 'App\Http\Controllers\ProdutoController@index')->name('produtos');
+
 
 
 Route::middleware('autenticacaoCliente')->group(function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClienteModel;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -10,43 +11,48 @@ class LoginController extends Controller
     public function index(){
         return view('site.login');
     }
-
     public function autenticar(Request $request)
-{
-    $regras = [
-        'emailUsuario'   => 'required|email',
-        'senhaUsuario'   => 'required'
-    ];
+    {
+        // Lógica de validação dos dados do formulário...
 
-    $msg = [
-        'emailUsuario.required'     =>  'Email obrigatório',
-        'emailUsuario.email'        =>  'O e-mail informado deve ser válido',
-        'senhaUsuario.required'     =>  'Senha obrigatória',
-    ];
+        $emailCliente = $request->get('emailCliente');
+        $senhaCliente = $request->get('senhaCliente');
 
-    $request->validate($regras, $msg);
 
-    $emailUsuario = $request->get('emailUsuario');
-    $senhaUsuario = $request->get('senhaUsuario');
+        $cliente = ClienteModel::where('email', $emailCliente)->first();
 
-    $cliente = ClienteModel::where('email', $emailUsuario)->first();
-    if (!$cliente) {
-        return back()->withErrors(['emailUsuario' => 'O email informado não existe']);
+        if ($cliente) {
+            // Faça algo com os dados do cliente encontrado
+        } else {
+            // Tratar caso nenhum cliente seja encontrado
+            return 'Cliente não encontrado.';
+        }
+
+        if (!is_null($emailCliente)) {
+            $cliente = ClienteModel::where('email', $emailCliente)->first();
+            // Restante do código...
+        } else {
+            // Tratar caso a variável $emailUsuario seja nula
+        }
+
+        // Verifica se a senha está correta
+        if (!Hash::check($senhaCliente, $cliente->senha)) {
+            return back()->withErrors(['senhaUsuario' => 'Senha incorreta']);
+        }
+
+        // Lógica de mapeamento do tipo de usuário
+        if ($cliente->nivelUsuario === 'admin') {
+            return redirect()->route('dashboard.admin');
+        }
+
+        // Se for um cliente, define a sessão para o dashboard de cliente
+        session([
+            'id' => $cliente->id,
+            'emailCliente' => $cliente->email,
+            'nome' => $cliente->nome,
+            'tipo_usuario' => 'cliente',
+        ]);
+
+        return redirect()->route('dashboard.cliente');
     }
-
-    if ($cliente->senha != $senhaUsuario) {
-        return back()->withErrors(['senhaUsuario' => 'Senha incorreta']);
-    }
-
-    session([
-        'id' => $cliente->id,
-        'emailUsuario' => $cliente->email,
-        'nome' => $cliente->nome,
-        'tipo_usuario' => 'cliente',
-    ]);
-
-    return redirect()->route('dashboard.cliente');
 }
-
-}
-

@@ -28,6 +28,8 @@
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...coloque-seu-código-de-integridade-aqui..." crossorigin="anonymous" />
 
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!--ICONE -->
      <!--GALERIA-->
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -36,7 +38,11 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
+     {{-- Animação banner carrosel  --}}
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
+
+     
    <!--  <link rel="stylesheet" href="{{ asset ('css/style.css') }}">-->
 
      <link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css') }}">
@@ -86,6 +92,7 @@
       </nav><!-- .navbar -->
 
       <a class="btn" href="{{ url('/login') }}">Login</a>
+
 
     <a href="{{ url('/carrinho') }}" class="cart"><i class="fas fa-shopping-cart"></i></a>
 
@@ -176,14 +183,25 @@
 
 
 <script src="{{ asset('js/cart.js') }}"></script>
+
 <script src="{{ asset('js/main.js') }}"></script>
+
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
 <script src="{{ asset('js/aos.js') }}"></script>
+
 <script src="{{ asset('js/glightbox.min.js') }}"></script>
+
 <script src="{{ asset('js/purecounter_vanilla.js') }}"></script>
+
 <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
 
+<script src="{{ asset('js/carrinho.js') }}"></script>
 
+{{-- JS CARROSEL Banner --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
     AOS.init();
 </script>

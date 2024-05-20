@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\ClienteModel;
+use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -18,17 +19,11 @@ class AutCriativeMiddle
     public function handle(Request $request, Closure $next, )
     {
 
-        $email = session('emailUsuario');
-        if ($email) {
-            $cliente = ClienteModel::where('email', $email)->first();
-            if (!$cliente) {
-                return redirect()->route('/login')->withErrors(['emailUsuario' => 'Não autenticado']);
-            }
-            
+        if (Auth::guard('cliente')->check()) {
             return $next($request);
         }
 
-        return redirect()->route('/login')->withErrors(['emailUsuario' => 'Não autenticado']);
+        return redirect()->route('login'); // Redireciona para a rota de login
     }
 }
 

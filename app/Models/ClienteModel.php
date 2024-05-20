@@ -11,8 +11,11 @@ class ClienteModel extends Model
 
     protected $table = 'tblclientes';
     protected $primarykey ='idCliente';
+    protected $fillable = ['nomeCliente', 'emailCliente', 'telefoneCliente','senhaCliente', 'created_at','updated_at']; // Nomes das colunas da tabela
 
     public function usuario(){
         return $this->morphOne(Usuario::class, 'tipo_usuario');
+
+
     }
 }
