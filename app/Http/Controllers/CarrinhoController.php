@@ -11,8 +11,7 @@ class CarrinhoController extends Controller
     public function index()
     {
 
-        return view('site.carrinho');
-
+            return view('carrinho.index');
 
     }
 

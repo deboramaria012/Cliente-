@@ -2,28 +2,20 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\ClienteModel;
-use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class AutCriativeMiddle
+class AutenticacaoClienteMiddleware
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
-     */
-    public function handle(Request $request, Closure $next, )
+    public function handle(Request $request, Closure $next)
     {
-
-        if (Auth::guard('cliente')->check()) {
-            return $next($request);
+        if (!Auth::check()) {
+            // Redireciona o usuário para a página de login se não estiver autenticado
+            return redirect()->route('login');
         }
 
-        return redirect()->route('login'); // Redireciona para a rota de login
+        // Permite que o request prossiga para a próxima etapa (ou rota, se estiver tudo certo)
+        return $next($request);
     }
 }
-

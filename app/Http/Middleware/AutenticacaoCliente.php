@@ -2,18 +2,50 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
+use App\Models\ClienteModel;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Closure;
+
 
 class AutenticacaoCliente
 {
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::guard('cliente')->check()) {
-            return $next($request);
-        }
+        $email = session('email');
 
-        return redirect()->route('login'); // Redireciona para a rota de login
+        if($email){
+
+            $usuario = Usuario::where('emailCliente',$email)->first();
+
+            if (!$usuario){
+                return redirect()->route('login')->withErrors(['email' => 'Não autenticado']);
+            }
+
+            $tipoCliente = $usuario->tipo_usuario;
+
+            if ($tipoCliente) {
+               $tipo = null;
+
+                if($tipoCliente instanceof ClienteModel){
+                    $tipo = 'aluno';
+                } elseif ($tipoCliente instanceof ClienteModel){
+                    $tipo = $tipoCliente->tipoFuncionario;
+                }
+
+            }
+
+            if($tipo == $tipoCliente){
+
+             return $next($request);
+
+            }else{
+                return back()->withErrors(['Email' => 'Acess não permitido para esse perfil']);
+            }
+
+            }
+
     }
 }
+
+

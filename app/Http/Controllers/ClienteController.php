@@ -4,22 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\ClienteModel;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function buscarClientePorEmail(Request $request)
+    public function index()
     {
-        $emailCliente = $request->input('email'); // Supondo que você esteja passando o email via parâmetro de requisição
+        $idCliente = session('id');
+        $cliente = ClienteModel::find($idCliente);
 
-        $cliente = ClienteModel::where('endereco_email', $emailCliente)->first();
+        $tipoUsuario = session('tipo');
 
-        if ($cliente) {
-            // Faça algo com os dados do cliente encontrado, como retornar uma view
-            return view('cliente', ['cliente' => $cliente]);
-        } else {
-            // Tratar caso nenhum cliente seja encontrado, como retornar uma mensagem de erro
-            return redirect()->back()->with('error', 'Cliente não encontrado.');
+        $usuario = Usuario::find($tipoUsuario);
+
+        if(!$cliente){
+            abort(404,'Cliente não encontrado');
         }
+        return view('site.dashboard.cliente.cliente', compact('cliente', 'usuario'));
     }
 }

@@ -7,36 +7,37 @@
 
 <main id="main">
 
-<section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Sobre nós</h2>
-        <p><span>CriativeArte</span></p>
-      </div>
-      <div class="row gy-4">
-        <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg);" data-aos="fade-up" data-aos-delay="150">
-          <!-- Conteúdo da imagem -->
-        </div>
-        <div class="col-lg-5 d-flex align-items-center text-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="content ps-0 ps-lg-5">
-            <p class="fst-italic fs-5">
-              A CriativeArte é uma empresa especializada em oferecer produtos personalizados de alta qualidade. Nossa missão é transformar momentos especiais em lembranças únicas por meio de canecas e brindes personalizados.
-            </p>
-            <ul class="fs-5">
-              <li><i class="bi bi-check2-all"></i> Personalização de produtos exclusivos para cada ocasião.</li>
-              <li><i class="bi bi-check2-all"></i> Design único e de alta qualidade em cada item.</li>
-              <li><i class="bi bi-check2-all"></i> Variedade de opções para expressar sua criatividade.</li>
-            </ul>
-            <div class="mt-4">
-              <a href="#" class="btn btn-primary">Saiba Mais</a>
+    <section id="about" class="about">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5 align-items-stretch">
+              <!-- Fallback Image for Testing -->
+              <img src="{{ asset('/img/sobre2.png') }}" alt="About Image">
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+              <div class="content">
+                <h3>Sobre a <strong>CriativeArte</strong></h3>
+                <p>
+                  Na CriativeArte, nos especializamos em brindes personalizados de alta qualidade, perfeitos para todas as ocasiões. Nossa missão é ajudar você a criar lembranças únicas e inesquecíveis através de nossos produtos personalizados.
+                </p>
+                <p class="fst-italic">
+                  Oferecemos uma ampla gama de produtos que podem ser personalizados conforme suas necessidades, seja para presentes corporativos, festas, eventos especiais ou uso pessoal.
+                </p>
+                <ul>
+                  <li><i class="bx bx-gift"></i> Personalização de canecas, camisetas, agendas e muito mais.</li>
+                  <li><i class="bx bx-customize"></i> Produtos de alta qualidade com impressões duradouras.</li>
+                  <li><i class="bx bx-check-double"></i> Atendimento personalizado para garantir sua total satisfação.</li>
+                </ul>
+                <p>
+                  Na CriativeArte, estamos comprometidos em oferecer produtos que não apenas atendam, mas superem suas expectativas. Seja qual for a ocasião, temos o brinde perfeito para você.
+                </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-</section><!-- End About Section -->
+      </section><!-- End About Section -->
+
 
 
 @endsection

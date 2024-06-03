@@ -15,6 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        // Aqui você pode definir tarefas agendadas (cron jobs)
+        // Exemplo:
         // $schedule->command('inspire')->hourly();
     }
 
@@ -25,6 +27,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
+        // Aqui você pode registrar comandos personalizados
         $this->load(__DIR__.'/Commands');
 
         require base_path('routes/console.php');

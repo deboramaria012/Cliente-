@@ -1,213 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>- @yield('title') CriativeArte</title>
-     <meta name="description" content="Fitmas - Gym & Fitness HTML Template">
-     <meta name="keywords" content="Fitmas - Gym & Fitness HTML Template">
-     <meta name="robots" content="INDEX,FOLLOW">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>CriativeArte</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
+  <!-- Favicons -->
 
-         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon.png') }}">
-         <link rel="manifest" href="{{ asset('assets/img/favicons/manifest.json') }}">
-         <meta name="msapplication-TileColor" content="#ffffff">
-         <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
-         <meta name="theme-color" content="#ffffff">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...coloque-seu-código-de-integridade-aqui..." crossorigin="anonymous" />
-
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!--ICONE -->
-     <!--GALERIA-->
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-
-     {{-- Animação banner carrosel  --}}
-     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-
-     
-   <!--  <link rel="stylesheet" href="{{ asset ('css/style.css') }}">-->
-
-     <link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css') }}">
-
-     <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
-
-     <link rel="stylesheet" href="{{ asset ('css/fontawesome.min.css') }}">
-
-     <link rel="stylesheet" href="{{ asset('css/nice-select.min.css') }}">
-
-     <!-- CSS SOBRE-->
-
-     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-
-     <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-
-     <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
-
-     <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
-
-     <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
-
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
-<body >
 
-    <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+<body>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-       <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>CriativeArte<span>.</span></h1>
-      </a>
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center fixed-top topbar-bg">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
+      <div class="topbar-item d-flex align-items-center">
+        <i class="bi bi-phone"></i><span>+1 5589 55488 55</span>
+      </div>
+      <div class="topbar-item ms-4 d-none d-lg-flex align-items-center">
+        <i class="bi bi-clock"></i><span>Mon-Sat: 11:00 AM - 23:00 PM</span>
+      </div>
+    </div>
+  </section>
 
-      <nav id="navbar" class="navbar">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">CriativeArte</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="{{ url('/') }}">Home</a></li>
-          <li><a href="{{ url('/sobre') }}">Sobre</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="{{ url('/servico') }}">Serviços</a></li>
-          <li><a href="{{ url('/contato') }}">Contato</a></li>
-          <li><a href="#gallery">Galeria</a></li>
-          </li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/sobre') }}">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/servico') }}">Serviço</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Galeria</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/contato') }}">Contato</a></li>
+
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a class="btn" href="{{ url('/login') }}">Login</a>
+      <a href="{{ url('/login') }}" class="book-a-table-btn scrollto">Login</a>
 
 
-    <a href="{{ url('/carrinho') }}" class="cart"><i class="fas fa-shopping-cart"></i></a>
 
     </div>
   </header><!-- End Header -->
 
-
-
-     <main>
+  <main>
     @yield('conteudo')
    </main>
 
-  <!-- ======= Hero Section ======= -->
-
-
-
-  <footer class="footer-wrapper footer-layout1" data-bg-src="{{ asset('assets/img/bg/footer-1-bg.png') }}">
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
     <div class="container">
-        <div class="widget-area">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-xl-3">
-                    <div class="widget footer-widget">
-                        <div class="widget-about">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="{{ asset('assets/img/logoVivaBem.svg') }}" alt="VivaBem"></a>
-                            </div>
-                            <p class="about-text">Uma academia, também conhecida como centro de fitness ou clube de saúde, é uma instalação dedicada à preparação física e academias de ginástica e normalmente oferece uma variedade de serviços.</p>
-                            <div class="social-btn">
-                                <a href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/" tabindex="0"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.discord.com/" tabindex="0"><i class="fab fa-discord"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Links Rápidos</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="{{ url('/sobre') }}">Sobre</a></li>
-                                <li><a href="{{ url('/modalidade') }}">Modalidades</a></li>
-                                <li><a href="{{ url('/treino') }}">Treino</a></li>
-                                <li><a href="{{ url('/noticia') }}">Notícias</a></li>
-                                <li><a href="{{ url('/contato') }}">Contato</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Receba boletim informativo</h3>
-                        <p class="footer-text">Ganhe 10% de desconto no seu primeiro pedido! Se apresse</p>
-
-                        <form action="" method="POST" class="contact-form newsletter" id="new_letters">
-                            @csrf
-                            <div class="form-group">
-                                <i class="far fa-envelope"></i>
-                                <input class="form-control" name="emailNew" id="emailNew" type="email" placeholder="Email" required="">
-                            </div>
-                            <button type="submit" value="Inscreva-se" class="btn style-r0 style2" onclick="new_letters(event)">Se inscrever</button>
-                            <div id="newsMensagem" class="msgContato"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 footer-info">
+          <h3 class="footer-title">CriativeArte</h3>
+          <p class="footer-text">Explorando a arte da criatividade para momentos únicos.</p>
         </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4 class="footer-title">Links Úteis</h4>
+          <ul class="footer-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5 col-md-6 footer-contact">
+          <h4 class="footer-title">Entre em Contato</h4>
+          <p><i class="bx bx-map"></i> Rua Exemplo, 123, Cidade, Estado, 12345</p>
+          <p><i class="bx bx-phone"></i> +55 1234 56789</p>
+          <p><i class="bx bx-envelope"></i> info@criativearte.com</p>
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-google"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="copyright-wrap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Criativearte</a>Todos os direitos reservados.</p></div>
-            </div>
-        </div>
+    <div class="container text-center">
+      <div class="credits">
+        &copy; <strong>CriativeArte</strong>. Todos os Direitos Reservados
+      </div>
     </div>
-</footer>
+  </footer>
 
-<div class="scroll-top">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-    </svg>
-</div>
+  <style>
+    /* Estilos do Footer */
+    .footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    .footer-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffc107;
+      margin-bottom: 20px;
+    }
+
+    .footer-text {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .footer-list li {
+      padding: 5px 0;
+    }
+
+    .footer-list li a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .footer-list li a:hover {
+      color: #ffc107;
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      font-size: 24px;
+      display: inline-block;
+      margin-right: 10px;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ffc107;
+    }
+
+    .credits {
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+  </style>
 
 
-<!-- JAVASCRIPT -->
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+  {{-- <script src="{{ asset() }}assets/vendor/php-email-form/validate.js"></script> --}}
 
-
-<script src="{{ asset('js/cart.js') }}"></script>
-
-<script src="{{ asset('js/main.js') }}"></script>
-
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-
-<script src="{{ asset('js/aos.js') }}"></script>
-
-<script src="{{ asset('js/glightbox.min.js') }}"></script>
-
-<script src="{{ asset('js/purecounter_vanilla.js') }}"></script>
-
-<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
-
-<script src="{{ asset('js/carrinho.js') }}"></script>
-
-{{-- JS CARROSEL Banner --}}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-    AOS.init();
-</script>
-
-
-
-</html>
+  <!-- Template Main JS File -->
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
+
+</html>

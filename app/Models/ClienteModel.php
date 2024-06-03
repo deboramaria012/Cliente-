@@ -14,7 +14,7 @@ class ClienteModel extends Model
     protected $fillable = ['nomeCliente', 'emailCliente', 'telefoneCliente','senhaCliente', 'created_at','updated_at']; // Nomes das colunas da tabela
 
     public function usuario(){
-        return $this->morphOne(Usuario::class, 'tipo_usuario');
+     return $this->morphOne(Usuario::class, 'tipo_usuario');
 
 
     }

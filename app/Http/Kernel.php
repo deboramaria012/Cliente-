@@ -36,7 +36,11 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
+            // \App\Http\Middleware\LogAcessoCliente::class,
         ],
+
+
 
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
@@ -65,8 +69,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'auth.redirect' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 
-        'autenticacaoCliente' =>
-         \App\Http\Middleware\AutCriativeMiddle::class,
+        // 'autenticacaoCliente' =>
+        //  \App\Http\Middleware\AutCriativeMiddle::class,
 
          'autenticacaoCliente' => \App\Http\Middleware\AutenticacaoCliente::class,
 
