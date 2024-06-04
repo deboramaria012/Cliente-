@@ -1,7 +1,8 @@
-@extends('layoutdash.layout')
+@extends('dashboard.layoutdash')
 
-@section('conteudo-dash')
+@section('title', 'Admin Dashboard')
 
-<h4>Olá, {{ $Cliente->nomeCliente }}</h4>
-
+@section('content')
+    <h1>Welcome to the Admin Dashboard</h1>
+    <!-- Admin content -->
 @endsection

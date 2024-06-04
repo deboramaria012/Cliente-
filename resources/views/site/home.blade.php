@@ -23,7 +23,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Criative</span>Arte</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animate__animated animate__fadeInUp">A CriativeArte é uma empresa especializada em brindes personalizados que tornam cada momento único e memorável.</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Produtos</a>
                 </div>
@@ -35,11 +35,10 @@
           <div class="carousel-item" style="background-image: url('/img/banner2.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">CriativeArte</h2>
+                <p class="animate__animated animate__fadeInUp">Com uma ampla gama de produtos, desde canecas e camisetas até agendas e itens de escritório, a CriativeArte permite que seus clientes expressem sua criatividade em cada presente.</p>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Produtos</a>
                 </div>
               </div>
             </div>
@@ -49,11 +48,10 @@
           <div class="carousel-item" style="background-image: url('/img/banner3.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">CriativeArte</h2>
+                <p class="animate__animated animate__fadeInUp">Combinando qualidade excepcional e design personalizado, cada brinde da CriativeArte é uma forma única de celebrar e marcar momentos especiais, tornando-se uma escolha ideal para presentear e encantar.</p>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Produtos</a>
                 </div>
               </div>
             </div>
@@ -673,6 +671,93 @@
 
     </div>
   </section><!-- End Gallery Section -->
+ <!-- Depoimentos de Clientes -->
+ <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Depoimentos de Clientes</h2>
+        <p>O que nossos clientes estão dizendo sobre nós</p>
+      </div>
+
+      <div class="testimonials-carousel swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Os brindes personalizados da CriativeArte superaram todas as minhas expectativas. A qualidade é excelente e o atendimento foi impecável. Recomendo a todos!
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="img/testimonials/testimonial-1.jpg" class="testimonial-img" alt="">
+              <h3>Maria Silva</h3>
+              <h4>Cliente Satisfeita</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fiquei impressionado com a variedade de produtos e a facilidade de personalização. Os brindes fizeram o maior sucesso no evento da minha empresa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="img/testimonials/testimonial-2.jpg" class="testimonial-img" alt="">
+              <h3>Carlos Souza</h3>
+              <h4>Empresário</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                A CriativeArte realmente entende do assunto. Fiz uma encomenda de canecas personalizadas e todos adoraram o resultado. A entrega foi rápida e o produto chegou em perfeito estado.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="img/testimonials/testimonial-3.jpg" class="testimonial-img" alt="">
+              <h3>Ana Pereira</h3>
+              <h4>Cliente Fiel</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Estou encantada com a CriativeArte! Fiz uma encomenda para o aniversário da minha filha e os produtos personalizados fizeram a diferença na decoração da festa. Excelente qualidade!
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="img/testimonials/testimonial-4.jpg" class="testimonial-img" alt="">
+              <h3>Juliana Oliveira</h3>
+              <h4>Mãe de Aniversariante</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.testimonials-carousel', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  </script>
 
 
   {{-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> --}}

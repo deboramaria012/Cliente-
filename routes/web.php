@@ -32,9 +32,11 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'autenticar'])->name('login.autenticar');
 
 
+
 Route::resource('gallery', GaleriaController::class);
 
 Route::prefix('admin')->group(function () {
+
     Route::get('/clientes', [AdminController::class,'indexcliente'])->name('admin.cliente.index');
     Route::get('/clientes/create', [AdminController::class,'createcliete'])->name('admin.cliente.create');
     Route::post('/clientes', [AdminController::class, 'cadcliente'])->name('admin.cliente.cad');
@@ -42,6 +44,8 @@ Route::prefix('admin')->group(function () {
     Route::put('/clientes/{id}',[AdminController::class, 'updatecliente'] )->name('admin.cliente.update');
     Route::delete('/clientes/{id}', [AdminController::class, 'desativarcliente'])->name('admin.cliente.desativar');
 });
+
+
 
 
 // Route::get('/buscar-cliente', function (Request $request) {
