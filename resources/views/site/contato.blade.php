@@ -20,8 +20,6 @@
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
-
-
 .container{
     width: 60%;
     padding: 45px;
@@ -64,7 +62,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 @media only screen and (max-width:600px){
     .container{
         width: 100%;
@@ -79,53 +76,46 @@
         <div class="row">
             <div class="col-md-7">
               <h4>Entrar em contato</h4>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+                <form action="send_mail.php" method="POST">
+                  <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Name</label>
+                      <input type="text" class="form-control" name="name" id="formGroupExampleInput" placeholder="Enter your name" required>
                   </div>
                   <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your email">
+                      <label for="formGroupExampleInput2" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email" id="formGroupExampleInput2" placeholder="Enter your email" required>
                   </div>
                   <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Número de contato</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your number">
+                      <label for="formGroupExampleInput2" class="form-label">Número de contato</label>
+                      <input type="text" class="form-control" name="contact_number" id="formGroupExampleInput2" placeholder="Enter your number" required>
                   </div>
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                      <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" required></textarea>
                   </div>
-                  <button class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
-            <div class="col-md-5 ">
+            <div class="col-md-5">
               <h4>Contate-nos</h4><hr>
               <div class="mt-4">
                   <div class="d-flex">
                     <i class="bi bi-geo-alt-fill"></i>
-                    <p >Endereço:Av. Marechal Tito, 1500
-                        São Miguel Paulista, São Paulo - SP, 08010-090</p>
+                    <p>Endereço: Av. Marechal Tito, 1500 São Miguel Paulista, São Paulo - SP, 08010-090</p>
                   </div><hr>
                   <div class="d-flex">
                     <i class="bi bi-telephone-fill"></i>
-                    <p>Contanto : +55 11932205849</p>
+                    <p>Contanto: +55 11932205849</p>
                   </div><hr>
                   <div class="d-flex">
                     <i class="bi bi-envelope-fill"></i>
-                    <p>Email:- Contact@gmail.com</p>
+                    <p>Email: Contact@gmail.com</p>
                   </div><hr>
               </div>
             </div>
         </div>
     </div>
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>

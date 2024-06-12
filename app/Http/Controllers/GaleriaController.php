@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class GaleriaController extends Controller
@@ -10,7 +11,7 @@ class GaleriaController extends Controller
     // Exibir lista de itens da galeria
     public function index()
     {
-        $galleries = Galeria::all();
+        $galleries = Gallery::all();
         return view('gallery.index', compact('galleries'));
     }
 
@@ -29,7 +30,7 @@ class GaleriaController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $galeria = new Galeria();
+        $galeria = new Gallery();
         $galeria->title = $request->title;
         $galeria->description = $request->description;
 
@@ -49,7 +50,7 @@ class GaleriaController extends Controller
     // Mostrar formulário para editar um item da galeria
     public function edit($id)
     {
-        $gallery = Galeria::find($id);
+        $gallery = Gallery::find($id);
         return view('gallery.edit', compact('gallery'));
     }
 
@@ -62,7 +63,7 @@ class GaleriaController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $galeria = Galeria::find($id);
+        $galeria = Gallery::find($id);
         $galeria->title = $request->title;
         $galeria->description = $request->description;
 
@@ -82,7 +83,7 @@ class GaleriaController extends Controller
     // Deletar item da galeria
     public function destroy($id)
     {
-        $galeria = Galeria::find($id);
+        $galeria = Gallery::find($id);
         $galeria->delete();
         return redirect()->route('gallery.index')->with('success', 'Item deletado com sucesso.');
     }

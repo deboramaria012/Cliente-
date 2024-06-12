@@ -10,12 +10,18 @@ class ClienteModel extends Model
     use HasFactory;
 
     protected $table = 'tblclientes';
-    protected $primarykey ='idCliente';
-    protected $fillable = ['nomeCliente', 'emailCliente', 'telefoneCliente','senhaCliente', 'created_at','updated_at']; // Nomes das colunas da tabela
+    protected $primaryKey = 'idCliente';
+    protected $fillable = [
+        'nomeCliente',
+        'emailCliente',
+        'telefoneCliente',
+        'senhaCliente',
+    ];
 
-    public function usuario(){
-     return $this->morphOne(Usuario::class, 'tipo_usuario');
+    protected $hidden = ['senhaCliente'];
 
-
+    public function setSenhaClienteAttribute($password)
+    {
+        $this->attributes['senhaCliente'] = bcrypt($password);
     }
 }

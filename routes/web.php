@@ -7,6 +7,7 @@ use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\SobreController;
 use App\Models\ClienteModel;
@@ -33,42 +34,36 @@ Route::post('/login', [LoginController::class, 'autenticar'])->name('login.auten
 
 
 
-Route::resource('gallery', GaleriaController::class);
-
-Route::prefix('admin')->group(function () {
-
-    Route::get('/clientes', [AdminController::class,'indexcliente'])->name('admin.cliente.index');
-    Route::get('/clientes/create', [AdminController::class,'createcliete'])->name('admin.cliente.create');
-    Route::post('/clientes', [AdminController::class, 'cadcliente'])->name('admin.cliente.cad');
-    Route::get('/clientes/{id}/edit', [AdminController::class, 'editcliente'])->name('admin.cliente.edit');
-    Route::put('/clientes/{id}',[AdminController::class, 'updatecliente'] )->name('admin.cliente.update');
-    Route::delete('/clientes/{id}', [AdminController::class, 'desativarcliente'])->name('admin.cliente.desativar');
+Route::middleware(['auth', 'admin'])->prefix('dashboard/admin')->group(function () {
+    Route::get('/cliente', [ClienteController::class, 'index'])->name('admin.cliente.index');
+    Route::get('/clientes/create', [AdminController::class, 'createCliente'])->name('admin.cliente.create');
+    Route::post('/clientes', [AdminController::class, 'cadCliente'])->name('admin.cliente.store');
+    Route::get('/clientes/{id}/edit', [AdminController::class, 'editCliente'])->name('admin.cliente.edit');
+    Route::put('/clientes/{id}', [AdminController::class, 'updateCliente'])->name('admin.cliente.update');
+    Route::delete('/clientes/{id}', [AdminController::class, 'deleteCliente'])->name('admin.cliente.delete');
 });
 
 
+Route::middleware(['auth', 'client'])->group(function () {
+    Route::get('/cliente/index', [ClienteController::class, 'clienteIndex'])->name('cliente.index');
+    // outras rotas protegidas para cliente
+});
 
 
-// Route::get('/buscar-cliente', function (Request $request) {
-//     $emailCliente = $request->input('email'); // Supondo que você esteja passando o email via URL
+Route::get('/cliente', [ClienteController::class, 'indexCliente'])->name('cliente.index');
+Route::post('/cliente/buscar', [ClienteController::class, 'buscarClientePorEmail'])->name('cliente.buscarPorEmail');
+// Add more routes as needed for cliente-specific actions
 
-//     if ($emailCliente) {
-//         $cliente = ClienteModel::where('email', $emailCliente)->first();
 
-//         if ($cliente) {
-//             // Faça algo com os dados do cliente encontrado, como retornar uma view
-//             return view('cliente', ['cliente' => $cliente]);
-//         } else {
-//             // Tratar caso nenhum cliente seja encontrado, como retornar uma mensagem de erro
-//             return redirect()->back()->with('error', 'Cliente não encontrado.');
-//         }
-//     } else {
-//         return redirect()->back()->with('error', 'Email não fornecido.');
-//     }
-// })->name('cliente.buscar');
 
-Route::post('/buscar-cliente', [ClienteController::class, 'buscarClientePorEmail'])->name('cliente.buscarPorEmail');
+Route::resource('gallery', GaleriaController::class);
+
+
 Route::get('/carrinho', [CarrinhoController::class, 'index'])->name('carrinho.index');
+Route::post('/carrinho/adicionar', [CarrinhoController::class, 'adicionarItem'])->name('carrinho.adicionar');
+Route::post('/carrinho/remover', [CarrinhoController::class, 'removerItem'])->name('carrinho.remover');
 
-Route::post('/adicionar-ao-carrinho', 'App\Http\Controllers\CarrinhoController@adicionarAoCarrinho')->name('adicionarAoCarrinho');
-Route::post('/remover-item-carrinho', 'App\Http\Controllers\CarrinhoController@removerItemCarrinho')->name('removerItemCarrinho');
-Route::get('/produtos', 'App\Http\Controllers\ProdutoController@index')->name('produtos');
+
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
+Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
+

@@ -161,10 +161,11 @@
         <ul>
           <li><a class="nav-link scrollto " href="{{ url('/') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/sobre') }}">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/servico') }}">Serviço</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Galeria</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('gallery') }}">Galeria</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/contato') }}">Contato</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/carrinho') }}">Carrinho</a></li>
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

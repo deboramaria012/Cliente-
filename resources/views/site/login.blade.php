@@ -104,33 +104,30 @@
     </style>
 </head>
 <body>
-
     <div class="login-container">
         <h2>Login</h2>
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
 
         <form action="{{ route('login.autenticar') }}" method="post">
             @csrf
             <div class="input-group">
-                <!-- Ícone do envelope para o campo de email -->
-                <span class="input-icon"><i class="bi bi-envelope-fill"></i></span>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Informe seu email" value="{{ old('email') }}">
-                @error('email')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror
+                <label for="emailUsuario">Email:</label>
+                <input type="email" id="emailUsuario" name="emailUsuario" placeholder="Informe seu email" required>
+                <!-- Adicione aqui a exibição de erros, se necessário -->
             </div>
 
             <div class="input-group">
-                <!-- Ícone do cadeado para o campo de senha -->
-                <span class="input-icon"><i class="bi bi-lock-fill"></i></span>
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Informe sua senha" value="{{ old('password') }}">
-                @error('password')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror
+                <label for="senhaUsuario">Senha:</label>
+                <input type="password" id="senhaUsuario" name="senhaUsuario" placeholder="Informe sua senha" required>
+                <!-- Adicione aqui a exibição de erros, se necessário -->
             </div>
 
-            <button type="submit" class="login-btn">Entrar</button>
+            <button type="submit">Entrar</button>
         </form>
     </div>
 

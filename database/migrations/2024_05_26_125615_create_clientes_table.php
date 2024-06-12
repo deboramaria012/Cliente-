@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('tblclientes', function (Blueprint $table) {
             $table->id('idCliente');
-            $table->string('nomeCliente');
-            $table->string('telefoneCliente');
-            $table->string('emailCliente');
-            $table->string('senhaCliente');
+            $table->string('nomeCliente', 50);
+            $table->string('telefoneCliente', 16 );
+            $table->string('emailCliente', 100);
+            $table->string('senhaCliente', 20);
 
             $table->timestamps();
         });
@@ -31,6 +31,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('tblclientes');
     }
 };
+
+
+

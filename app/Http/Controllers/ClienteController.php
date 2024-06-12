@@ -9,18 +9,11 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function index()
-    {
-        $idCliente = session('id');
-        $cliente = ClienteModel::find($idCliente);
+// ClienteController.php
 
-        $tipoUsuario = session('tipo');
-
-        $usuario = Usuario::find($tipoUsuario);
-
-        if(!$cliente){
-            abort(404,'Cliente não encontrado');
+ 
+        public function index()
+        {
+            return view('dashboard.administrador.cliente.index');
         }
-        return view('site.dashboard.cliente.cliente', compact('cliente', 'usuario'));
     }
-}

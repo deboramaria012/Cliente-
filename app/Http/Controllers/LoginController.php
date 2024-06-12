@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClienteModel;
+use App\Models\Usuario;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -26,6 +28,13 @@ class LoginController extends Controller
             // Login bem-sucedido
         } else {
             // Falha na autenticação
+            if (Auth::attempt(['email' => $emailCliente, 'password' => $senhaCliente])) {
+                // Autenticação bem-sucedida
+            } else {
+                // Autenticação falhou
+            }
+
         }
+
     }
 }

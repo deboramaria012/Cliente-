@@ -9,182 +9,64 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function indexCliente()
-    {
-        $clientes = ClienteModel::all();
-        return view('dashboard.cliente.admin', ['clientes' => $clientes]);
-    }
+// AdminController.php
 
-    public function createCliente()
-    {
-        return view('admin.clientes.create');
-    }
+public function index()
+{
+    // Fetch all customers
+    $clientes = ClienteModel::all();
 
-    public function storeCliente(Request $request)
-    {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:clientes',
-        ]);
-
-        $cliente = new ClienteModel();
-        $cliente->nome = $request->nome;
-        $cliente->email = $request->email;
-
-        $cliente->save();
-
-        return redirect()->route('admin.cliente.index')->with('success', 'Cliente criado com sucesso!');
-    }
-
-    public function editCliente($id)
-    {
-        $cliente = ClienteModel::find($id);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        return view('admin.clientes.edit', ['cliente' => $cliente]);
-    }
-
-    public function updateCliente(Request $request, $id)
-    {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:clientes,email,' . $id,
-        ]);
-
-        $cliente = ClienteModel::find($id);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        $cliente->nome = $request->nome;
-        $cliente->email = $request->email;
-
-        $cliente->save();
-
-        return redirect()->route('admin.cliente.index')->with('success', 'Cliente atualizado com sucesso!');
-    }
-
-    public function destroyCliente($id)
-    {
-        $cliente = ClienteModel::find($id);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        $cliente->delete();
-
-        return redirect()->route('admin.cliente.index')->with('success', 'Cliente deletado com sucesso!');
-    }
-
-    // Métodos para gerenciar produtos do cliente
-    public function indexProduto($clienteId)
-    {
-        $cliente = ClienteModel::find($clienteId);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        $produtos = Produto::where('cliente_id', $clienteId)->get();
-        return view('admin.produtos.index', ['cliente' => $cliente, 'produtos' => $produtos]);
-    }
-
-    public function createProduto($clienteId)
-    {
-        $cliente = ClienteModel::find($clienteId);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        return view('admin.produtos.create', ['cliente' => $cliente]);
-    }
-
-    public function storeProduto(Request $request, $clienteId)
-    {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'descricao' => 'required|string|max:255',
-            'preco' => 'required|numeric',
-        ]);
-
-        $produto = new Produto();
-        $produto->nome = $request->nome;
-        $produto->descricao = $request->descricao;
-        $produto->preco = $request->preco;
-        $produto->cliente_id = $clienteId;
-
-        $produto->save();
-
-        return
-
-        $produto->save();
-
-        return redirect()->route('admin.produto.index', $clienteId)->with('success', 'Produto criado com sucesso!');
-    }
-
-    public function editProduto($clienteId, $produtoId)
-    {
-        $cliente = ClienteModel::find($clienteId);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        $produto = Produto::where('cliente_id', $clienteId)->find($produtoId);
-
-        if (!$produto) {
-            abort(404, 'Produto não encontrado');
-        }
-
-        return view('admin.produtos.edit', ['cliente' => $cliente, 'produto' => $produto]);
-    }
-
-    public function updateProduto(Request $request, $clienteId, $produtoId)
-    {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'descricao' => 'required|string|max:255',
-            'preco' => 'required|numeric',
-        ]);
-
-        $produto = Produto::where('cliente_id', $clienteId)->find($produtoId);
-
-        if (!$produto) {
-            abort(404, 'Produto não encontrado');
-        }
-
-        $produto->nome = $request->nome;
-        $produto->descricao = $request->descricao;
-        $produto->preco = $request->preco;
-
-        $produto->save();
-
-        return redirect()->route('admin.produto.index', $clienteId)->with('success', 'Produto atualizado com sucesso!');
-    }
-
-    public function destroyProduto($clienteId, $produtoId)
-    {
-        $cliente = ClienteModel::find($clienteId);
-
-        if (!$cliente) {
-            abort(404, 'Cliente não encontrado');
-        }
-
-        $produto = Produto::where('cliente_id', $clienteId)->find($produtoId);
-
-        if (!$produto) {
-            abort(404, 'Produto não encontrado');
-        }
-
-        $produto->delete();
-
-        return redirect()->route('admin.produto.index', $clienteId)->with('success', 'Produto deletado com sucesso!');
-    }
+    // Return a view with the customers data
+    return view('dashboard.admin.clientes.index', ['clientes' => $clientes]);
 }
 
+public function createCliente()
+{
+    // Return a view for creating a new customer
+    return view('dashboard.admin.clientes.create');
+}
+
+public function cadCliente(Request $request)
+{
+    // Validate and process the customer creation request
+    $validatedData = $request->validate([
+        'nome' => 'required|max:255',
+        'email' => 'required|email|unique:clientes',
+        'telefone' => 'required|min:10',
+    ]);
+
+    // Create a new customer record
+    $cliente = ClienteModel::create($validatedData);
+
+    // Return a redirect to the customer list
+    return redirect()->route('admin.cliente.index')->with('success', 'Cliente cadastrado com sucesso!');
+}
+
+public function editCliente($id)
+{
+    // Find the customer by ID
+    $cliente = ClienteModel::find($id);
+
+    // Return a view for editing the customer
+    return view('dashboard.admin.clientes.edit', ['cliente' => $cliente]);
+}
+
+public function updateCliente(Request $request, $id)
+{
+    // Validate and process the customer update request
+    $validatedData = $request->validate([
+        'nome' => 'required|max:255',
+        'email' => 'required|email|unique:clientes,email,'.$id,
+        'telefone' => 'required|min:10',
+    ]);
+
+    // Find the customer by ID
+    $cliente = ClienteModel::findOrFail($id);
+
+    // Update the customer record with validated data
+    $cliente->update($validatedData);
+
+    // Return a redirect to the customer list
+    return redirect()->route('admin.cliente.index')->with('success', 'Cliente atualizado com sucesso!');
+}
+}
